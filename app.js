@@ -24,7 +24,7 @@ board.on('ready', function(){
     moment.locale('ru');
 
 
-    function addOne() {
+    function printTime() {
         var date = moment().format('L');
         var time = moment().format('LTS');
         lcd.cursor(0, 0).print(date);
@@ -32,7 +32,7 @@ board.on('ready', function(){
     }
 
     var il = new InfiniteLoop();
-    il.add(addOne).setInterval(1000).run();
+    il.add(printTime).setInterval(1000).run();
 
 
 });
