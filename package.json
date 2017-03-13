@@ -4,6 +4,7 @@
   "description": "The info watch",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Max Korinets",
@@ -12,7 +13,6 @@
     "etherport-client": "^0.1.2",
     "infinite-loop": "^0.2.2",
     "johnny-five": "^0.10.6",
-    "moment": "^2.17.1",
-    "udp-serial": "^0.2.0"
+    "moment": "^2.17.1"
   }
 }

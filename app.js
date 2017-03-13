@@ -5,10 +5,11 @@ var moment = require('moment');
 
 var board = new five.Board({
     port: new EtherPortClient({
-        host: '192.168.0.106', // IP address of the ESP
+        host: '192.168.0.102', // IP address of the ESP
         port: 3030
     }),
-    timeout: 1e5});
+    timeout: 1e5,
+    repl: false});
 
 
 
@@ -22,7 +23,6 @@ board.on('ready', function(){
     });
 
 
-    lcd.useChar("bell");
     moment.locale('ru');
 
 
@@ -32,7 +32,6 @@ board.on('ready', function(){
         var time = moment().format('LTS');
         lcd.cursor(0, 0).print(date);
         lcd.cursor(1, 0).print(time);
-        // alarm.high();
     }
 
     var il = new InfiniteLoop();
