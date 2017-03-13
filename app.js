@@ -16,8 +16,6 @@ var board = new five.Board({
 board.on('ready', function(){
     console.log('five ready');
 
-    // var led = new five.Led(2);
-    // led.blink();
     var lcd = new five.LCD({
         controller: "PCF8574AT"
     });
