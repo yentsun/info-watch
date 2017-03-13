@@ -25,7 +25,6 @@ board.on('ready', function(){
 
 
     function addOne() {
-        // lcd.cursor(0, 0).print(":bell:");
         var date = moment().format('L');
         var time = moment().format('LTS');
         lcd.cursor(0, 0).print(date);
